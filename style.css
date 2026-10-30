@@ -1,0 +1,113 @@
+/* ---------- Colors (change these to remix the theme!) ---------- */
+:root {
+  --lavender-bg: #eadfff;
+  --card: #fbf7ff;
+  --screen: #f3eaff;
+  --number: #e4d6ff;
+  --clear: #d2bdf7;
+  --operator: #ffc2de;
+  --equals: #ff9acb;
+  --text: #4a3a6b;
+  --shadow: #c9b3f0;
+}
+
+/* Make padding and borders count inside an element's width */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;      /* center up and down */
+  justify-content: center;  /* center left and right */
+  background: var(--lavender-bg);
+  font-family: "Quicksand", "Trebuchet MS", sans-serif;
+  color: var(--text);
+}
+
+/* ---------- The calculator card ---------- */
+.calculator {
+  width: 320px;
+  max-width: 92vw;
+  padding: 24px 20px 18px;
+  background: var(--card);
+  border: 3px solid var(--operator);
+  border-radius: 32px;
+  box-shadow: 0 10px 0 var(--shadow);
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.subtitle {
+  margin: 4px 0 16px;
+  font-size: 0.85rem;
+}
+
+/* ---------- The screen ---------- */
+.display {
+  min-height: 64px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  background: var(--screen);
+  border: 2px dashed var(--clear);
+  border-radius: 20px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: right;
+  overflow-x: auto;          /* long numbers can scroll */
+  white-space: nowrap;
+}
+
+/* ---------- Button grid: 4 equal columns ---------- */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 16px 0;
+  border: none;
+  border-radius: 18px;
+  background: var(--number);
+  box-shadow: 0 4px 0 var(--shadow);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+/* Squish down when pressed */
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--shadow);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 2px;
+}
+
+.span-2 {
+  grid-column: span 2;  /* this button is two columns wide */
+}
+
+.clear    { background: var(--clear); }
+.operator { background: var(--operator); }
+.equals   { background: var(--equals); }
+
+.footer {
+  margin: 16px 0 0;
+  font-size: 0.8rem;
+}

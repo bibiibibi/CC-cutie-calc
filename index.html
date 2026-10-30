@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cutie calc &lt;3</title>
+
+  <!-- A cute rounded font from Google Fonts (falls back to a normal font if offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="calculator">
+    <h1>˚₊‧ cutie calc ‧₊˚</h1>
+    <p class="subtitle">✿ do your maths with love ✿</p>
+
+    <!-- The screen where numbers show up -->
+    <div class="display" id="display" aria-live="polite">0</div>
+
+    <!-- All the buttons live inside this grid -->
+    <div class="buttons" id="buttons">
+      <button class="btn clear span-2" data-action="clear">C ✧</button>
+      <button class="btn clear" data-action="delete">⌫</button>
+      <button class="btn operator" data-operator="÷">÷</button>
+
+      <button class="btn" data-number="7">7</button>
+      <button class="btn" data-number="8">8</button>
+      <button class="btn" data-number="9">9</button>
+      <button class="btn operator" data-operator="×">×</button>
+
+      <button class="btn" data-number="4">4</button>
+      <button class="btn" data-number="5">5</button>
+      <button class="btn" data-number="6">6</button>
+      <button class="btn operator" data-operator="−">−</button>
+
+      <button class="btn" data-number="1">1</button>
+      <button class="btn" data-number="2">2</button>
+      <button class="btn" data-number="3">3</button>
+      <button class="btn operator" data-operator="+">+</button>
+
+      <button class="btn span-2" data-number="0">0</button>
+      <button class="btn" data-action="decimal">.</button>
+      <button class="btn equals" data-action="equals">&lt;3</button>
+    </div>
+
+    <p class="footer">made with &lt;3 ♡ ⋆｡°✩</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
